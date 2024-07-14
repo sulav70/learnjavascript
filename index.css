@@ -1,1 +1,13 @@
+h1{
+    text-align: center;
+    background-color: aqua;
+}
 
+.classBox{
+    background-color: red;
+    padding: 20px;
+    width: 50%;
+    height: 50%;
+    color: white;
+    cursor: pointer;
+}
