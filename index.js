@@ -615,15 +615,93 @@
 // console.log(result);
 
 
-function GenerateOTP(){
-  let otp = Math.floor(100000 + Math.random() + 900000);
-  return otp;
+// function GenerateOTP(){
+//   let otp = Math.floor(100000 + Math.random() + 900000);
+//   return otp;
+// }
+// console.log(GenerateOTP());
+
+// let num = Math.max(1,2,3,4,5,6,7,8,9);
+// console.log(num);
+
+
+// const myFun = ()=>{
+//   console.log(myFun, 2000)
+// };
+// //set timeout
+// setTimeout(myFun, 2000);
+
+// setInterval(() => {
+//   console.log("I Love javacsript")
+// }, 1000);
+
+// const intervalId = setInterval(() => {
+//   console.log("i love javascript")
+// }
+// )
+
+// setTimeout(() => {
+//   clearInterval(intervalId);
+// })
+
+// function Updateclock(){
+//   const clock = document.querySelector(".clock");
+//   const now = new Date()
+//   const hours = now.getHours().toString().padStart(2, "0");
+//   const minutes = now.getMinutes().toString().padStart(2, "0");
+//   const seconds = now.getSeconds().toString().padStart(2, "0");
+
+// clock.innerHTML = `${hours} : ${minutes} : ${seconds}`; 
+
+// }
+// setInterval(Updateclock, 1000);
+
+//oop(javascript)
+// function Person(name,age,address){
+//   this.name = name;
+//   this.age = age;
+//   this.address = address;
+
+//   this.greeting = function(){
+//     let greet = `Hello my name is${this.name}. I am ${this.age}. i live in ${this.address}`
+//     return greet;
+//   };
+
+// }
+
+// const person1 = new Person("ram thapa", 23, "balaju");
+// const person2 = new Person("gita thapa", 20, "satungal");
+
+// console.log(person1,person2);
+// console.log(perosn1.greeting());
+
+
+function BankAccount(customerName,balance = 0) {
+  this.customerName = customerName;
+  this.balance = balance;
+  this.accountNumber = Date.now();
+
+  this.deposit = function (amount){
+    this.balance += amount;
+  };
 }
-console.log(GenerateOTP());
 
-let num = Math.max(1,2,3,4,5,6,7,8,9);
-console.log(num);
+const addForm = document.querySelector("#addform");
+const customerName = document.querySelector("#customerName");
+const balance = document.querySelector("#balance");
 
+accounts = [];
+Form.addEventlistener("submit", (e) => {
+  e.preventDefault();
+  
+}
+)
+// const ramAccount = new BankAccount("Ram thapa", 10000);
+// const shyamAccount = new BankAccount("Shyam thapa", 30000);
+
+// shyamAccount.deposit(40000);
+
+// console.log(ramAccount, shyamAccount);
 
 
 

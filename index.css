@@ -11,3 +11,10 @@ h1{
     color: white;
     cursor: pointer;
 }
+
+.clock{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 20px;
+    background-color: rgb(113, 113, 120);
+}
