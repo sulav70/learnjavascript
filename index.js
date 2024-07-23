@@ -676,26 +676,26 @@
 // console.log(perosn1.greeting());
 
 
-function BankAccount(customerName,balance = 0) {
-  this.customerName = customerName;
-  this.balance = balance;
-  this.accountNumber = Date.now();
+// function BankAccount(customerName,balance = 0) {
+//   this.customerName = customerName;
+//   this.balance = balance;
+//   this.accountNumber = Date.now();
 
-  this.deposit = function (amount){
-    this.balance += amount;
-  };
-}
+//   this.deposit = function (amount){
+//     this.balance += amount;
+//   };
+// }
 
-const addForm = document.querySelector("#addform");
-const customerName = document.querySelector("#customerName");
-const balance = document.querySelector("#balance");
+// const addForm = document.querySelector("#addform");
+// const customerName = document.querySelector("#customerName");
+// const balance = document.querySelector("#balance");
 
-accounts = [];
-Form.addEventlistener("submit", (e) => {
-  e.preventDefault();
-  
-}
-)
+// accounts = [];
+// Form.addEventlistener("submit", (e) => {
+//   e.preventDefault();
+
+// }
+// )
 // const ramAccount = new BankAccount("Ram thapa", 10000);
 // const shyamAccount = new BankAccount("Shyam thapa", 30000);
 
@@ -703,7 +703,39 @@ Form.addEventlistener("submit", (e) => {
 
 // console.log(ramAccount, shyamAccount);
 
+//profile management
+class BankAccount {
+  constructor(customerName, balance = 0) {
+    this.customerName = customerName;
+    this.balance = balance;
+    this.accountNumber = Date.now();
+  }
+  deposit(amount) {
+    this.balance += amount;
+
+  }
+  withdraw(amount) {
+    this.balance -= amount;
+  }
+}
+
+// const  harkaAccount = new BankAccount("harka rai", 5000);
+// const balenAccount = new BankAccount("balen shah", 4000);
 
 
+class SavingAccount extends BankAccount {
+  constructor(customerName, balance) {
+    
+    super(customerName, balance);
+  }
+  takePerosnalLoan(amount, taxrate) {
+    let ans = amount + (amount * taxrate) / 100;
+    console.log(`Interest shahid ko loan:${ans}`);
+  }
+}
 
 
+const harkaAccount = new SavingAccount("harka rai", 5000);
+const balenAccount = new SavingAccount("balen shah", 4000);
+
+console.log(harkaAccount, balenAccount);
